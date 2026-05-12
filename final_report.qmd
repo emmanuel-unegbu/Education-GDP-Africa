@@ -1,7 +1,7 @@
 ---
 title: "Does Education Spending influence GDP in Africa?"
 author: "Emmanuel Unegbu"
-date: "30th April 2026"
+date: April 2026
 format: html
 editor: visual
 ---
