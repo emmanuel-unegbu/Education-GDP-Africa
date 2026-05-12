@@ -1,0 +1,80 @@
+========================================
+MODEL 1: Simple Regression
+GDP Per Capita ~ Education Spending
+========================================
+
+
+Call:
+lm(formula = gdp_per_capita ~ edu_spending_pct, data = africa_clean)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-3982.6 -1237.0  -799.4    -2.3 17499.4 
+
+Coefficients:
+                 Estimate Std. Error t value Pr(>|t|)    
+(Intercept)         951.2      199.6   4.766 2.23e-06 ***
+edu_spending_pct    289.7       47.0   6.164 1.12e-09 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 2652 on 807 degrees of freedom
+Multiple R-squared:  0.04497,	Adjusted R-squared:  0.04379 
+F-statistic:    38 on 1 and 807 DF,  p-value: 1.117e-09
+
+
+
+========================================
+MODEL 2: With Income Controls
+GDP Per Capita ~ Education Spending + Income Group
+========================================
+
+
+Call:
+lm(formula = gdp_per_capita ~ edu_spending_pct + income, data = africa_clean)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-4646.0  -390.7  -122.6   216.5  5214.8 
+
+Coefficients:
+                           Estimate Std. Error t value Pr(>|t|)    
+(Intercept)                15240.86     260.45  58.516   <2e-16 ***
+edu_spending_pct              16.45      19.00   0.866    0.387    
+incomeLow income          -14631.15     255.73 -57.213   <2e-16 ***
+incomeLower middle income -13621.76     254.49 -53.526   <2e-16 ***
+incomeNot classified      -14784.17     330.47 -44.736   <2e-16 ***
+incomeUpper middle income  -9182.50     269.47 -34.076   <2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 995.4 on 803 degrees of freedom
+Multiple R-squared:  0.8661,	Adjusted R-squared:  0.8653 
+F-statistic:  1039 on 5 and 803 DF,  p-value: < 2.2e-16
+
+
+
+========================================
+MODEL 3: Log-Level Regression
+Log(GDP Per Capita) ~ Education Spending
+========================================
+
+
+Call:
+lm(formula = log_gdp ~ edu_spending_pct, data = africa_clean)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-1.9799 -0.5296 -0.1478  0.4395  2.7739 
+
+Coefficients:
+                 Estimate Std. Error t value Pr(>|t|)    
+(Intercept)       6.64838    0.06533 101.769  < 2e-16 ***
+edu_spending_pct  0.12783    0.01538   8.309 4.07e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.8682 on 807 degrees of freedom
+Multiple R-squared:  0.07881,	Adjusted R-squared:  0.07766 
+F-statistic: 69.04 on 1 and 807 DF,  p-value: 4.072e-16
+
