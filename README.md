@@ -38,13 +38,13 @@ Do African countries that spend a larger share of their GDP on education tend to
     -   `scripts/02_data_cleaning.R`
     -   `scripts/03_visualizations.R`
     -   `scripts/04_regression_analysis.R`
-4.  Open `final_report.qmd` and click **Render**
+4.  Open `index.qmd` and click **Render**
 
 ## Project Structure
 
 -   education_gdp_project
--   final_report.qmd
--   final_report.html
+-   index.qmd
+-   index.html
 -   data -output
 -   scripts
 
